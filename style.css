@@ -1,0 +1,683 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #dfdfdf;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تصميم شاشة التحميل */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader div {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #3498db;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation-delay: 0.2s;
+}
+
+.dot3 {
+  animation-delay: 0.4s;
+}
+
+/* حركة البونسي */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* إخفاء المحتوى الأول */
+#content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header {
+    background-color: #ffffffee;
+    color: white;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    margin-right: 40px;
+    height: 25px; /* ارتفاع الصورة */
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+.nav a {
+    color: #414141;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: bold;
+}
+.menu-icon {
+    color: rgba(53, 53, 53, 0.527);
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    animation: move 2s ;
+}
+@keyframes move {
+   
+    50% {
+      transform: translateX(-100px);
+    }
+   
+  }
+@media (max-width: 834px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 40px; /* علشان نبعد القائمة عن الهدر */
+        right: 0;
+        width: 100%;
+        padding: 30px;
+        text-align: right; /* علشان نركز النص في شاشة الهاتف */
+   height: 100vh;
+    }
+  
+    .nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+/* التعديل الجديد علشان الكلام يظهر في نص الشاشة */
+@media (min-width: 834px) {
+    .header {
+        justify-content: center; /* علشان نركز العناصر في المنتصف */
+    }
+    .nav {
+        margin-right: 20px; /* علشان نبعد القائمة عن اللوجو */
+    }
+}
+
+.container {
+    width: 100%;
+    height: 40%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 10px; /* مسافة من الأعلى */
+    text-align: center;
+  }
+ 
+
+  .container h1 {
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .gradient-letter {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7b00, #ff007b);
+    -webkit-background-clip: text; /* تحديد الخلفية على النص فقط */
+    -webkit-text-fill-color: transparent; /* يجعل النص شفافًا ليظهر التدريج */
+    display: inline-block;
+  }
+
+  .container p {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* يتيح التفاف الزرين في حالة صغر الشاشة */
+    gap: 10px; /* مسافة بين الزرين */
+    margin-bottom: 20px;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .button-group .primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .button-group .primary:hover {
+    background-color: #0056b3;
+  }
+
+  .button-group .secondary {
+    border: 1px solid #007bff; /* لون الحواف */
+    color: #2760fd;
+  }
+
+  .button-group .secondary:hover {
+    background-color: #0088ff;
+    color: white;
+  }
+
+  .container img {
+    width: 95%;
+    max-width: 400px;
+  }
+
+  /* وسائل الإعلام لجعل التصميم متجاوب */
+  @media (max-width: 780px) {
+    .container h1 {
+      font-size: 20px;
+    }
+    .gradient-letter{
+        font-size: 20px;
+    }
+    .container p {
+      font-size: 14px;
+    }
+
+    .button-group button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container h1 {
+      font-size: 40px;
+    }
+    .gradient-letter{
+        font-size: 50px;
+    }
+    .container p {
+      font-size: 20px;
+    }
+
+    .button-group {
+      flex-direction: wrap; 
+      align-items: center;
+    }
+
+    .button-group button {
+
+      max-width: 200px;
+    }
+
+    .container img {
+      max-width: 50%; /* الصورة تتكيف مع الشاشة */
+    }
+  }
+
+
+  .container3 {
+    width: 100%;
+    height: 40%;
+    background-color: #0f0f0f;
+    padding: 20px;
+    margin-bottom: 10px; /* مسافة من الأعلى */
+    text-align: center;
+  }
+
+
+  .container3 h1 {
+    font-size: 60px;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+
+  .gradient-letter {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7b00, #ff007b);
+    -webkit-background-clip: text; /* تحديد الخلفية على النص فقط */
+    -webkit-text-fill-color: transparent; /* يجعل النص شفافًا ليظهر التدريج */
+    display: inline-block;
+  }
+
+  .container3 p {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* يتيح التفاف الزرين في حالة صغر الشاشة */
+    gap: 10px; /* مسافة بين الزرين */
+    margin-bottom: 20px;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .button-group .primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .button-group .primary:hover {
+    background-color: #0056b3;
+  }
+
+  .button-group .secondary {
+    border: 1px solid #007bff; /* لون الحواف */
+    color: #2760fd;
+  }
+
+  .button-group .secondary:hover {
+    background-color: #0088ff;
+    color: white;
+  }
+
+  .container3 img {
+    width: 95%;
+    max-width: 400px;
+  }
+
+  /* وسائل الإعلام لجعل التصميم متجاوب */
+  @media (max-width: 780px) {
+    .container3 h1 {
+      font-size: 20px;
+    }
+    .gradient-letter{
+        font-size: 20px;
+    }
+    .container3 p {
+      font-size: 14px;
+    }
+
+    .button-group button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container3 h1 {
+      font-size: 40px;
+    }
+    .gradient-letter{
+        font-size: 50px;
+    }
+    .container3 p {
+      font-size: 20px;
+    }
+
+    .button-group {
+      flex-direction: wrap; 
+      align-items: center;
+    }
+
+    .button-group button {
+
+      max-width: 200px;
+    }
+
+    .container3 img {
+      max-width: 50%; /* الصورة تتكيف مع الشاشة */
+    }
+  }
+
+
+
+
+  .progct1 {
+    text-align: center;
+    background: linear-gradient(180deg, #000000, #222222);    padding: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  
+  }
+
+  .progct1 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .progct1 p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 28px;
+    background: transparent;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button-group button:hover {
+    background: #007bff;
+    color: #fff;
+  }
+
+  .progct1 img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    margin-top: 40px;
+    
+  }
+  @media (max-width: 768px) {
+    .progct1 h1 {
+      font-size: 20px;
+    }
+
+    .progct1 p {
+      font-size: 14px;
+    }
+
+    .button-group button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    .progct1 h1 {
+      font-size: 30px;
+    }
+    .gradient-letter{
+        font-size: 50px;
+    }
+    .progct1 p {
+      font-size: 16px;
+    }
+
+    .button-group {
+      flex-direction: wrap; 
+      align-items: center;
+    }
+
+    .button-group button {
+
+      max-width: 200px;
+    }
+
+    .progct1 img {
+        margin: 5px;
+      max-width: 29%; /* الصورة تتكيف مع الشاشة */
+    }
+  }
+
+
+  .progct2 {
+    text-align: center;
+    background-color: #ffffff; 
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+  
+  } 
+
+  .progct2 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  .progct2 p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 28px;
+    background: transparent;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button-group button:hover {
+    background: #007bff;
+    color: #fff;
+  }
+
+  .progct2 img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    margin-top: 40px;
+    
+  }
+  @media (max-width: 768px) {
+    .progct2 h1 {
+      font-size: 20px;
+    }
+
+    .progct2 p {
+      font-size: 14px;
+    }
+
+    .button-group button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    .progct2 h1 {
+      font-size: 30px;
+    }
+    .gradient-letter{
+        font-size: 50px;
+    }
+    .progct2 p {
+      font-size: 16px;
+    }
+
+    .button-group {
+      flex-direction: wrap; 
+      align-items: center;
+    }
+
+    .button-group button {
+
+      max-width: 200px;
+    }
+
+    .progct2 img {
+        margin: 5px;
+      max-width: 29%; /* الصورة تتكيف مع الشاشة */
+    }
+  }
+
+
+  .progct2 img {
+    margin: 5px;
+  max-width: 80%; /* الصورة تتكيف مع الشاشة */
+}
+
+.scrolling-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap; /* يمنع العناصر من الانتقال لسطر جديد */
+  background-color: #e0e0e0;
+  padding: 10px 0;
+  position: relative;
+}
+.scrolling-content {
+  display: inline-block;
+  animation: scroll-horizontal 65s linear infinite; /* الحركة الأفقية */
+}
+.scrolling-content img {
+  height: 150px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+@keyframes scroll-horizontal {
+  0% {
+      transform: translateX(0%); /* يبدأ من الجانب الأيمن */
+  }
+  100% {
+      transform: translateX(-100%); /* يتحرك لليسار */
+  }
+}
+
+
+
+
+.pro{
+  display: flex;
+  justify-content: space-between;
+ margin: 12px;
+
+}
+
+.progct3{
+  background: linear-gradient(180deg, #000000, #222222);    padding: 20px;
+
+  width: 49.5%; /* المساحة التي سيأخذها كل مربع */
+  text-align: center;
+}
+
+.progct3 h1{
+  font-size: 50px;
+color: #ffffff;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.progct3 p{
+  font-size: 25px;
+color: #ffffff;
+margin: 10px;
+}
+
+.progct3 img {
+  width: 60%;
+  margin: 20px;
+  margin-top: 30px;
+  
+}
+/* استعلامات الوسائط (media queries) */
+@media (max-width: 480px) {
+  .pro {
+    width: 100%;
+    flex-direction: column; /* المربعين يكونوا فوق بعض */
+    align-items: center;
+    margin: 0;
+ 
+  }
+
+  .progct3 {
+    margin-bottom: 10px;
+    width: 100%; /* عرض المربعين 80% على الشاشات الصغيرة */
+   
+  }
+  .progct3 h1{
+    font-size: 30px;
+  }
+  .progct3 p{
+  font-size: 18px;
+  }
+  .progct3 img{
+    margin: 10px;
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+.pp{
+  text-align: right;
+  background-color: #ebebeb;
+  padding: 30px;
+  
+ 
+}
+
+.pp p{
+  font-size: 1rem;
+  color: #252525;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid #949494;  /* اللون والسُمك */
+  width: 80%;  /* عرض الخط */
+  margin: 20px auto;  /* المسافة من الأعلى والأسفل */
+}
+
+
