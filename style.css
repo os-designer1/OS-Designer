@@ -624,9 +624,15 @@ margin: 10px;
  
 }
 
-.pp p{
-  font-size: 10px;;
+.pp p {
+  font-size: 18px;
   color: #252525;
+}
+
+@media (max-width: 480px) {
+  .pp p {
+    font-size: 14px;
+  }
 }
 
 hr {
