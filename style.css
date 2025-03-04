@@ -107,7 +107,7 @@ p {
   p {
       margin: 20px;
       margin-top: 5%;
-      font-size: 15px;
+      font-size: 14px;
   }
 }
 .container {
@@ -638,29 +638,39 @@ margin: 10px;
 
 
 .pp{
+padding: 30px;
   text-align: right;
   background-color: #ebebeb;
-  padding: 30px;
-  
- 
 }
-
 .pp p {
+margin: 0;
+padding-top: 10px;
+  text-align: right;
   font-size: 18px;
   color: #252525;
 }
 
+.pp h4{
+  padding-top: 20px;
+  font-size: 20px;
+  color: #252525;
+
+}
 @media (max-width: 480px) {
   .pp p {
+   
     font-size: 14px;
   }
 }
+.pp h4{
 
+  font-size: 16px;
+}
 hr {
   border: 0;
   border-top: 2px solid #949494;  /* اللون والسُمك */
-  width: 80%;  /* عرض الخط */
-  margin: 20px auto;  /* المسافة من الأعلى والأسفل */
+  width: 100%;  /* عرض الخط */
+  margin: 0px auto;  /* المسافة من الأعلى والأسفل */
 }
 
 
