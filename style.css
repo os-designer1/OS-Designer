@@ -123,7 +123,6 @@ p {
   .container h1 {
     font-size: 60px;
     margin-top: 30px;
-    margin-bottom: 10px;
     color: #333;
   }
 
@@ -139,6 +138,7 @@ p {
   .container p {
     font-size: 30px;
     color: #333;
+    margin-top: 10px;
     margin-bottom: 20px;
   }
 
@@ -192,7 +192,7 @@ p {
         font-size: 20px;
     }
     .container p {
-      font-size: 14px;
+      font-size: 18px;
     }
 
     .button-group button {
@@ -209,7 +209,7 @@ p {
         font-size: 50px;
     }
     .container p {
-      font-size: 20px;
+      font-size: 16px;
     }
 
     .button-group {
@@ -326,7 +326,7 @@ p {
         font-size: 50px;
     }
     .container3 p {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .button-group {
@@ -349,7 +349,8 @@ p {
 
   .progct1 {
     text-align: center;
-    background: linear-gradient(180deg, #000000, #222222);    padding: 20px;
+    background: linear-gradient(180deg, #000000, #222222);  
+    padding: 20px;
     width: 100%;
     margin-bottom: 10px;
   
@@ -357,13 +358,14 @@ p {
 
   .progct1 h1 {
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-bottom:10px;
     color: #ffffff;
   }
 
   .progct1 p {
     font-size: 25px;
     margin-bottom: 20px;
+    margin-top: 20px;
     background-color: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
