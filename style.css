@@ -212,7 +212,7 @@ p {
 
   @media (max-width: 480px) {
     .container h1 {
-      font-size: 40px;
+      font-size: 70px;
     }
     .gradient-letter{
         font-size: 50px;
@@ -232,7 +232,7 @@ p {
     }
 
     .container img {
-      max-width: 70%; /* الصورة تتكيف مع الشاشة */
+      max-width: 60%; /* الصورة تتكيف مع الشاشة */
     }
   }
 
