@@ -21,7 +21,9 @@ body{
 }
 
 .header {
-    background-color: #ffffffee;
+    background-color: #ffffff7a;
+    backdrop-filter: blur(5px); /* تأثير الضبابية */
+    -webkit-backdrop-filter: blur(5px); /* دعم لمتصفح Safari */
     color: white;
     padding: 7px 20px;
     display: flex;
