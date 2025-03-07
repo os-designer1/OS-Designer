@@ -404,6 +404,7 @@ p {
   }
 
   .progct1 img {
+    border-radius: 5px;
     width: 100%;
     max-width: 300px;
     margin: 20px;
