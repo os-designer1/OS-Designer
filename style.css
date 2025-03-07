@@ -658,13 +658,11 @@ padding-top: 10px;
 @media (max-width: 480px) {
   .pp p {
    
-    font-size: 14px;
+    font-size: 12px;
+    
   }
 }
-.pp h4{
 
-  font-size: 16px;
-}
 hr {
   border: 0;
   border-top: 2px solid #949494;  /* اللون والسُمك */
