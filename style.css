@@ -127,12 +127,12 @@ a{
   text-align: center;
 }
 
-.header + p {
+.header + .p-top {
   margin-top: 55px; /* Adjust this value as needed */
 }
 
 @media (max-width: 800px) {
-  p {
+  .p-top {
       margin: 8px;
       margin-top: 5%;
       font-size: 14px;
