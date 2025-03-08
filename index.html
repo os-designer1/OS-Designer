@@ -10,6 +10,7 @@
     <meta name="author" content="osama">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <title>OS-Designer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -40,7 +41,7 @@
          <div class="menu-icon" onclick="toggleNav()">☰</div>
          </div>
     
-         <p>احصل علي خصم يصل 50% خلال شهر رمضان <a href="https://os-designer1.github.io/ordar/"
+         <p class="p-top">احصل علي خصم يصل 50% خلال شهر رمضان <a href="https://os-designer1.github.io/ordar/"
             >اطلب الان</a></p>
 
          <div class="container">
@@ -126,6 +127,219 @@
                </div>
  </div>
 
+
+
+
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <picture>
+                <source srcset="img-400px-1.png" media="(max-width: 767px)">
+                <img src="img-1028px-1.png" alt="صورة 1">
+            </picture>
+            <div class="overlay">
+                <div class="text-container">
+                    <h2>خدمات ورقيه</h2>
+                    <p>تصميمات كتب و مجلات</p>
+                </div>
+                <a href=""><button>اكتشف المزيد</button></a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <picture>
+                <source srcset="img-400px-2.png" media="(max-width: 767px)">
+                <img src="img-1028px-2.png" alt="صورة 2">
+            </picture>
+            <div class="overlay">
+                <div class="text-container">
+                    <h2>كتاب الدحيح</h2>
+                    <p>تصميمات كتب مميزه</p>
+                </div>
+                <a href=""><button>اكتشف المزيد</button></a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <picture>
+                <source srcset="img-400px-3.png" media="(max-width: 767px)">
+                <img src="img-1028px-3.png" alt="صورة 3">
+            </picture>
+            <div class="overlay">
+                <div class="text-container">
+                    <h2>لوجو</h2>
+                    <p>اطلب اللوجو و استمتع بالخصومات</p>
+                </div>
+                <a href=""><button>اكتشف المزيد</button></a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <picture>
+                <source srcset="img-400px-4.png" media="(max-width: 767px)">
+                <img src="img-1028px-4.png" alt="صورة 3">
+            </picture>
+            <div class="overlay">
+                <div class="text-container">
+                    <h2>اعلان</h2>
+                    <p>اجزب عملائك باعلانك</p>
+                </div>
+                <a href=""><button>اكتشف المزيد</button></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<style>
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* التراكب عند التوقف على الصورة */
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px); /* عرض التراكب يكون داخل الصورة */
+}
+
+.text-container {
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-container p {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.swiper-slide:hover .overlay {
+    opacity: 1;
+}
+
+/* تصغير النصوص والصور في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .swiper {
+        height: 100%;
+    }
+
+    .overlay {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+        width: calc(100% - 20px); /* عرض التراكب يكون داخل الصورة */
+    }
+
+    .text-container {
+        text-align: center;
+    }
+
+    .text-container h2 {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+}
+
+
+
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".mySwiper", {
+slidesPerView: 1,
+spaceBetween: 10,
+loop: true,
+autoplay: {
+    delay: 3000, // تغيير كل 3 ثوانٍ
+    disableOnInteraction: false, // يستمر في العمل بعد التفاعل
+},
+speed: 1000, // سرعة التبديل
+});
+
+swiper.on('slideChangeTransitionStart', function () {
+var activeSlide = document.querySelector('.swiper-slide-active .overlay');
+if (activeSlide) {
+    activeSlide.style.opacity = '0';
+    activeSlide.style.transition = 'opacity 0.5s ease-in-out';
+}
+});
+
+swiper.on('slideChangeTransitionEnd', function () {
+var activeSlide = document.querySelector('.swiper-slide-active .overlay');
+if (activeSlide) {
+    activeSlide.style.opacity = '1';
+    activeSlide.style.transition = 'opacity 0.5s ease-in-out';
+}
+});
+
+// Adjust image sources for mobile devices
+swiper.on('init', function () {
+var slides = document.querySelectorAll('.swiper-slide picture source');
+slides.forEach(function (slide) {
+    if (window.innerWidth <= 767) {
+        slide.srcset = slide.srcset.replace('img-', 'image-small');
+    }
+});
+});
+
+swiper.init();
+
+</script>
 
          
         
