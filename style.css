@@ -109,7 +109,7 @@ p {
 
 @media (max-width: 800px) {
   p {
-      margin: 20px;
+      margin: 8px;
       margin-top: 5%;
       font-size: 14px;
   }
@@ -684,3 +684,31 @@ hr {
 }
 
 
+
+
+
+
+    /* CSS Styling */
+    .shopping-bag {
+      font-size: 20px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 20px;
+      transition: 4s;
+    }
+
+    .shopping-bag:hover {
+      color: #007bff; /* لون عند التمرير */
+    }
+
+    @media (max-width: 480px) {
+      .shopping-bag {
+        position: fixed;
+        bottom: 0px;
+        right: 60px;
+        padding: 10px;
+      }
+    }
