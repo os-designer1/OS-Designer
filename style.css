@@ -712,6 +712,130 @@ hr {
 
 
 
+
+
+
+
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* التراكب عند التوقف على الصورة */
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px); /* عرض التراكب يكون داخل الصورة */
+}
+
+.text-container {
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-container p {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.swiper-slide:hover .overlay {
+    opacity: 1;
+}
+
+/* تصغير النصوص والصور في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .swiper {
+        height: 100%;
+    }
+
+    .overlay {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+        width: calc(100% - 20px); /* عرض التراكب يكون داخل الصورة */
+    }
+
+    .text-container {
+        text-align: center;
+    }
+
+    .text-container h2 {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   padding: 50px;
       background: #1c1c1c;
