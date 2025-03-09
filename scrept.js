@@ -20,10 +20,10 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     loop: true,
     autoplay: {
-        delay: 3000, // تغيير كل 3 ثوانٍ
+        delay: 3500, // تغيير كل 3 ثوانٍ
         disableOnInteraction: false, // يستمر في العمل بعد التفاعل
     },
-    speed: 1000, // سرعة التبديل
+    speed: 2000, // سرعة التبديل
     });
     
     swiper.on('slideChangeTransitionStart', function () {

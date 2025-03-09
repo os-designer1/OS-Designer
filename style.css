@@ -734,9 +734,12 @@ hr {
 }
 
 .swiper-slide picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto 20px auto; /* Center the image horizontally and add margin-bottom */
+  object-fit: cover;
 }
 
 /* التراكب عند التوقف على الصورة */
