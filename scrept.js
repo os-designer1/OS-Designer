@@ -1,4 +1,9 @@
 
+  console.log("Firebase Initialized!");
+function toggleNav() {
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const columns = document.querySelectorAll(".footer-column h4");
