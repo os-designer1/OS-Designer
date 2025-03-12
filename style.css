@@ -49,6 +49,9 @@ body{
     font-size: 15px;
     font-style: bold;
 }
+.nav a:hover {
+  color: #313131; /* لون عند التمرير */
+}
     /* CSS Styling */
     .shopping-bag {
       font-size: 20px;
