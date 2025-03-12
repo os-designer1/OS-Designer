@@ -1,27 +1,4 @@
-  // استيراد Firebase
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-  // تكوين Firebase
-  const firebaseConfig = {
-      apiKey: "AIzaSyC8JacuYRkR8ppCAjJ2Qy_ZQ46vln7Crc",
-      authDomain: "os-designer.firebaseapp.com",
-      projectId: "os-designer",
-      storageBucket: "os-designer.firebasestorage.app",
-      messagingSenderId: "1020294877896",
-      appId: "1:1020294877896:web:a3ec7e166552c66f350ffd",
-      measurementId: "G-Q8FKLXDNL0"
-  };
-
-  // تهيئة Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  console.log("Firebase Initialized!");
-function toggleNav() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("active");
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const columns = document.querySelectorAll(".footer-column h4");
