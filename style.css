@@ -818,8 +818,9 @@ button {
 
     button {
         font-size: 14px;
-        padding: 8px 16px;
+        padding: 7px 12px;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
