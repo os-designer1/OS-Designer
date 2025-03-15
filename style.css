@@ -125,7 +125,7 @@ a{
 }
 .p-top {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 22px;
   color: #414141;
   text-align: center;
 }
@@ -138,7 +138,7 @@ a{
   .p-top {
       margin: 8px;
       margin-top: 5%;
-      font-size: 14px;
+      font-size: 18px;
   }
 }
 .container {
