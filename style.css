@@ -618,7 +618,7 @@ a{
 }
 
 .progct3{
-  background: linear-gradient(180deg, #000000, #222222);    padding: 20px;
+  background-color: #000000;    padding: 20px;
 
   width: 49.5%; /* المساحة التي سيأخذها كل مربع */
   text-align: center;
