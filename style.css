@@ -52,30 +52,7 @@ body{
 .nav a:hover {
   color: #313131; /* لون عند التمرير */
 }
-    /* CSS Styling */
-    .shopping-bag {
-      font-size: 20px;
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin-left: 20px;
-      transition: 4s;
-    }
 
-    .shopping-bag:hover {
-      color: #007bff; /* لون عند التمرير */
-    }
-
-    @media (max-width: 480px) {
-      .shopping-bag {
-        position: fixed;
-        bottom: 0px;
-        right: 60px;
-        padding: 10px;
-      }
-    }
 .menu-icon {
     color: rgba(53, 53, 53, 0.527);
     display: none;
@@ -83,13 +60,7 @@ body{
     cursor: pointer;
     animation: move 2s ;
 }
-@keyframes move {
-   
-    50% {
-      transform: translateX(-100px);
-    }
-   
-  }
+
 @media (max-width: 834px) {
     .nav {
         display: none;
@@ -120,6 +91,46 @@ body{
         margin-right: 20px; /* علشان نبعد القائمة عن اللوجو */
     }
 }
+.login-b {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  opacity: 0; /* اجعل الزر شفافًا في البداية */
+  animation: fadeIn 2s forwards; /* إضافة الأنيميشن */
+}
+
+/* تأثير التمرير على الزر */
+.login-b:hover {
+  transform: scale(1.1);
+}
+
+/* الأنيميشن للشفافية */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .login-b {
+    font-size: 10px;
+    padding: 8px 20px;
+    opacity: 0; /* اجعل الزر شفافًا في البداية */
+    animation: fadeIn 2s forwards; /* إضافة الأنيميشن */
+    margin: 0 0 0 150px;
+  }
+  
+}
+
 a{
   color: #1f53ff;
 }
@@ -131,7 +142,7 @@ a{
 }
 
 .header + .p-top {
-  margin-top: 55px; /* Adjust this value as needed */
+  margin-top: 90px; /* Adjust this value as needed */
 }
 
 @media (max-width: 800px) {
