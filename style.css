@@ -136,20 +136,20 @@ a{
 }
 .p-top {
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 19px;
   color: #414141;
   text-align: center;
 }
 
 .header + .p-top {
-  margin-top: 90px; /* Adjust this value as needed */
+  margin-top: 70px; /* Adjust this value as needed */
 }
 
 @media (max-width: 800px) {
   .p-top {
       margin: 8px;
       margin-top: 5%;
-      font-size: 18px;
+      font-size: 14px;
   }
 }
 .container {
