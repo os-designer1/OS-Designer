@@ -21,7 +21,7 @@ body{
 }
 
 .header {
-    background-color: #5f5f5fda;
+    background-color: #3f3f3f7e;
     backdrop-filter: blur(15px); /* تأثير الضبابية */
     -webkit-backdrop-filter: blur(5px); /* دعم لمتصفح Safari */
     color: white;
@@ -54,7 +54,7 @@ body{
 }
 
 .menu-icon {
-    color: rgb(202, 202, 202);
+    color: rgb(218, 218, 218);
     display: none;
     font-size: 24px;
     cursor: pointer;
@@ -87,7 +87,6 @@ body{
 /* التعديل الجديد علشان الكلام يظهر في نص الشاشة */
 @media (min-width: 834px) {
     .header {
-        padding:0;
         justify-content: center; /* علشان نركز العناصر في المنتصف */
     }
     .nav {
