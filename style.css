@@ -637,8 +637,8 @@ color: #ffffff;
 
 .progct3 img {
   width: 30%;
-  margin: 20px;
-  margin-top: 30px;
+  margin: 0px;
+  margin-top: 0px;
   
 }
 /* استعلامات الوسائط (media queries) */
@@ -663,7 +663,7 @@ color: #ffffff;
   font-size: 18px;
   }
   .progct3 img{
-    margin: 10px;
+    margin: 0px;
     width: 80%;
   }
 }
