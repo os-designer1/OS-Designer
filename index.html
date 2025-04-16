@@ -59,6 +59,34 @@
 </div>
 -->
 
+
+<div class="sher">
+    <h2>شارك موقعنا بكل سهوله =></h2>
+    
+    <button id="shareButton">شارك الموقع</button>
+    
+    <script>
+        const shareButton = document.getElementById('shareButton');
+    
+        shareButton.addEventListener('click', async () => {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: 'OS-Designer لجميع التصميمات',
+                text: 'هنصمم لك كل حاجة و بالسعر الي انتا عوزو',
+                url: window.location.href,
+              });
+            } catch (error) {
+              console.error('حدث خطأ أثناء المشاركة:', error);
+            }
+          } else {
+            alert('ميزة المشاركة غير مدعومة في هذا المتصفح.');
+          }
+        });
+      </script>
+</div>
+
+
          <div class="container">
          <h1>log<span class="gradient-letter">o</span></h1>
          <p>لوجو يعكس هويتك بكل إبداع</p>
