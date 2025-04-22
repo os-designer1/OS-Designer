@@ -96,31 +96,6 @@
 -->
 
 
-<div class="sher">
-    <h2>شارك موقعنا بكل سهوله =></h2>
-    
-    <button id="shareButton">شارك الموقع</button>
-    
-    <script>
-        const shareButton = document.getElementById('shareButton');
-    
-        shareButton.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: 'OS-Designer لجميع التصميمات',
-                text: 'هنصمم لك كل حاجة و بالسعر الي انتا عوزو',
-                url: window.location.href,
-              });
-            } catch (error) {
-              console.error('حدث خطأ أثناء المشاركة:', error);
-            }
-          } else {
-            alert('ميزة المشاركة غير مدعومة في هذا المتصفح.');
-          }
-        });
-      </script>
-</div>
 
 
          <div class="container">
@@ -164,7 +139,7 @@
 
 
    
-
+<div class="spess">
         <div class="container3">
             <h1><span class="gradient-letter">logo</span>Teshrt</h1>
             <p> لوجو مميز على تيشرت لترك انطباع دائم</p>
@@ -172,7 +147,7 @@
             <a href="https://os-designer1.github.io/OS-Designer-logo-Teshrt-Designer/"> <button class="primary"> اعرف المزيد</button></a>
             <a href="https://os-designer1.github.io/ordar-t-shert/"> <button class="secondary"> اطلب تصميم</button></a>
             </div>
-            <img src="تصميم زي شركه os.jpg" alt="Sample Image" loading="lazy">
+            <img src="t-shert.png" alt="Sample Image" loading="lazy">
             </div>
 
   <div class="pro">
@@ -188,7 +163,7 @@
 
 
  </div>
-
+</div>
 
 
 
@@ -293,128 +268,6 @@
         <span class="country">مصر | Egypt</span>
     </div>
 </footer>
-     <style>
-    .footer {
-    padding: 50px;
-        background: #1c1c1c;
-        color: #fff;
-        padding: 20px;
-        text-align: right;
-        direction: rtl;
-    }
-    .footer-top {
-        padding-right: 95px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-    .footer-top img{
-        width: 40px;
-    }
-    .footer-container {
-        padding-left: 50px;
-        padding-right: 100px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .footer-column {
-        width: 22%;
-    }
-    .footer-column h4 {
-        cursor: pointer;
-        margin-bottom: 10px;
-        transition: color 0.3s ease;
-    }
-    .footer-column h4:hover {
-        color: #d4d4d4;
-    }
-    .footer-list {
-        list-style: none;
-        padding: 0;
-        display: block;
-        transition: max-height 0.3s ease-out;
-    }
-    .footer-column ul li a {
-        font-size: 18px;
-        color: #ccc;
-        text-decoration: none;
-    }
-    .footer-column ul li a:hover {
-        text-decoration: underline;
-        color: #fff;
-    }
-    .footer-bottom {
-        text-align: center;
-        margin-top: 60px;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        font-size: 14px;
-        color: #666;
-    }
 
-    .footer-bottom a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #ffffff;
-    }
-
-    .footer-bottom a:hover {
-        text-decoration: underline;
-        color: #ffffff;
-    }
-
-    .footer-bottom .country {
-        color: #ccc;
-        margin-right: 300px;
-    }
-
-    .footer-bottom span {
-        color: #cecece;
-    }
-
-    @media (max-width: 768px) {
-        .footer-bottom .country {
-            font-size: 12px;
-            display: block;
-            margin: 10px 0 0 0;
-        }
-    }
-    @media (max-width: 768px) {
-        .footer-top{
-            padding-right: 0px;
-            padding-top: 10px;
-        }
-        .footer-container {
-            padding: 10px;
-            flex-direction: column;
-        }
-        .footer-top img{
-        width: 30px;
-    }
-        .footer-column {
-            width: 100%;
-        }
-        .footer-list {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .footer-column h4::after {
-            content: " ▼";
-            float: left;
-            transition: transform 0.3s ease;
-        }
-        .footer-column.open h4::after {
-            content: " ▲";
-        }
-        .footer-column.open .footer-list {
-            max-height: 500px; /* Adjust as needed */
-        }
-    }
-
-
-
-    </style></body>
+    </body>
 </html>
