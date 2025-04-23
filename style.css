@@ -689,7 +689,7 @@ margin: 0 5px 10px 5px;
 }
 .nav-tshert {
     width: 48.5%;
-    height: auto;
+    height: 600px;
 background-color: #000;
 display: flex;
 justify-content: center;
@@ -735,7 +735,7 @@ flex-direction: column;
     .nav-tshert{
         width: 100%;
         margin: 0 0 10px 0;
-
+       height: 400px;
     }
     .nav-pepar{
         width: 100%;
