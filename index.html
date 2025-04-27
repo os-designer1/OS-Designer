@@ -126,6 +126,17 @@
             <div class="cart-total" style="position: sticky; bottom: 20px; left: 20px; right: 20px; background: #fff; padding: 15px 0 10px 0; box-shadow: 0 -2px 10px rgba(0,0,0,0.03); text-align: center;">
                 المجموع: <span id="cart-total">0</span> جنيه
             </div>
+            <button id="send-order-btn" style="width:100%;background:#007bff;color:#fff;font-size:18px;padding:12px 0;border:none;border-radius:8px;cursor:pointer;margin-top:18px;transition:background 0.2s;">
+                <i class="fas fa-paper-plane" style="margin-left:8px;"></i>ارسال الطلبات
+            </button>
+            <script>
+                document.getElementById('send-order-btn').onmouseover = function() {
+                    this.style.background = '#0056b3';
+                };
+                document.getElementById('send-order-btn').onmouseout = function() {
+                    this.style.background = '#007bff';
+                };
+                </script>        
         </div>
 
         <style>
@@ -142,7 +153,7 @@
         .cart-count {
             position: absolute;
             top: 9px;
-            right: -6px;
+            right: -px;
             background: #000000;
             color: #ffffff;
             border-radius: 50%;
@@ -277,20 +288,20 @@
                         const itemElement = document.createElement('div');
                         itemElement.className = 'cart-item';
                         itemElement.innerHTML = `
-                            <img src="${item.image}" alt="${item.name}">
-                            <div class="cart-item-details">
-                                <h4>${item.name}</h4>
-                                <p>${item.price} جنيه</p>
-                                <div class="cart-item-controls">
-                                    <button class="remove-btn" onclick="removeFromCart(${item.id})">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
-                                    <span class="quantity">${item.quantity}</span>
-                                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
-                                </div>
-                            </div>
-                        `;
+                        <img src="${item.image}" alt="${item.name}">
+                    <div>
+                        <h4>${item.name}</h4>
+                        <p>${item.price} جنيه</p>
+                        <div>
+                            <button onclick="updateQuantity('${item.id}', ${item.quantity - 1})" style="border:none;border-radius:50%;width:28px;height:28px;font-size:18px;color:#000;cursor:pointer;margin:0 5px;">-</button>
+                            <span style="display:inline-block;min-width:24px;text-align:center;font-weight:bold;font-size:16px;color:#222;background:#f7f7f7;border-radius:6px;padding:3px 8px;margin:0 2px;">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', ${item.quantity + 1})" style=";border:none;border-radius:50%;width:28px;height:28px;font-size:18px;color:#000;cursor:pointer;margin:0 5px;">+</button>
+                            <button onclick="removeFromCart('${item.id}')" style="background:none;border:none;cursor:pointer;color:red;font-size:18px; padding: 0 5px;" title="حذف">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
                         cartItems.appendChild(itemElement);
                         total += item.price * item.quantity;
                     });
